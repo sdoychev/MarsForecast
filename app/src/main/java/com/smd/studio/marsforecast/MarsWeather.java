@@ -7,7 +7,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
 /**
- * Created by Doychev on 22.5.2015 ã..
+ * Created by Doychev on 22.5.2015
  */
 
 public class MarsWeather extends Application {
