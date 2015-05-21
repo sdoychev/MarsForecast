@@ -1,12 +1,12 @@
 package com.smd.studio.marsforecast;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,10 +25,10 @@ import java.util.Calendar;
 import java.util.Random;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     final static String RECENT_API_ENDPOINT = "http://marsweather.ingenology.com/v1/latest/";
-    final static String FLICKR_API_KEY = "";
+    final static String FLICKR_API_KEY = "26d69afddc218b64b43facc7b856358f";
     final static String IMAGES_API_ENDPOINT = "https://api.flickr.com/services/rest/?format=json&nojsoncallback=1&sort=random&method=flickr.photos.search&tags=mars,planet,rover&tag_mode=all&api_key=";
     final static String SHARED_PREFS_IMG_KEY = "img";
     final static String SHARED_PREFS_DAY_KEY = "day";
@@ -47,8 +47,8 @@ public class MainActivity extends ActionBarActivity {
         mTxtWeather = (TextView) findViewById(R.id.weather);
         mTxtError = (TextView) findViewById(R.id.error);
         mImageView = (ImageView) findViewById(R.id.main_bg);
-        mTxtDegrees.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Lato-light.ttf"));
-        mTxtWeather.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Lato-light.ttf"));
+        mTxtDegrees.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf"));
+        mTxtWeather.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf"));
 
         mSharedPref = getPreferences(Context.MODE_PRIVATE);
         if (mSharedPref.getInt(SHARED_PREFS_DAY_KEY, 0) != today) {
